@@ -1,0 +1,126 @@
+/* 기존 스타일 */
+/* Global Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+header {
+  background-color: #2c3e50;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+}
+
+main {
+  padding: 20px;
+}
+
+/* 검색창 스타일 */
+.search-section {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#search-input {
+  width: 60%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#search-btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: white;
+  background-color: #2980b9;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#search-btn:hover {
+  background-color: #3498db;
+}
+
+/* 영화 카드 스타일 */
+#movies-container,
+#favorites-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.movie-card {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 200px;
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.movie-card:hover {
+  transform: scale(1.05);
+}
+
+.movie-card img {
+  max-width: 100%;
+  border-radius: 5px;
+}
+
+.movie-card button {
+  padding: 5px 10px;
+  font-size: 14px;
+  color: white;
+  background-color: #e74c3c;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.movie-card button:hover {
+  background-color: #c0392b;
+}
+
+.movie-card h3 {
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+  #search-input {
+    width: 90%;
+  }
+
+  .movie-card {
+    width: 150px; /* 더 작은 카드 크기 */
+  }
+
+  .movie-card h3 {
+    font-size: 14px;
+  }
+
+  .movie-card img {
+    max-height: 200px; /* 이미지 크기 제한 */
+  }
+}
+
+@media (max-width: 992px) {
+  #search-input {
+    width: 80%;
+  }
+
+  .movie-card {
+    width: 180px;
+  }
+}
